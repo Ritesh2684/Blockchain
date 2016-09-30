@@ -15,32 +15,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<script>
 
-    
-   var app = angular.module('myApp', []);
-	app.controller('myCtrl', function($scope, $http) {
-		$scope.query=function($scope, $http) {
-			alert();
-			var baseurl="http://127.0.0.1:3000/";
-			var req = {
-						method: 'GET',
-						url: baseurl + "query/ru/UK",
-						headers: {'Content-Type': "application/json"}
-					};
-			 $http(req).then(function mySucces(response) {
-					$scope.myWelcome = response.data;
-				});
-
-		  
-		};
-	});
-
-
-
-
-
-</script>
 
 		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">
 				
