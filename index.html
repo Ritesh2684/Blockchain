@@ -7,7 +7,6 @@
 
 <link href="style.css" rel="stylesheet" />
 <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,24 +16,41 @@
 </head>
 <body>
 <script>
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
+
     
-    $scope.addShare=function() {
-	
-		alert("asfddsf");
-    	$scope.selected=$scope.addressBooks;
-    };
-});
+   var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope, $http) {
+		$scope.query=function($scope, $http) {
+			alert();
+			var baseurl="http://127.0.0.1:3000/";
+			var req = {
+						method: 'GET',
+						url: baseurl + "query/ru/UK",
+						headers: {'Content-Type': "application/json"}
+					};
+			 $http(req).then(function mySucces(response) {
+					$scope.myWelcome = response.data;
+				});
+
+		  
+		};
+	});
+
+
+
 
 
 </script>
 
-		<div ng-app="myApp" ng-controller="namesCtrl" class="maincontent">
+		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">
 				
 							<!-- Bootstrap table started -->					
 							<div class="container">
-							  <a href="127.0.0.1:3000/query" >query</a>
+							  <span ng-click="query();" >query</span>
 							  </div>
+							 <div>
+							 REsponse: <h1>{{myWelcome}}</h1>
+							</div>	
 		</div>
   
   <!-- Modal AddContact -->
