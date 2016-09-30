@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font:10px 'Open Sans', sans-serif;
+	color: #5e5b64;
+	text-align:center;
+	    
+}
+
+a, a:visited {
+	outline:none;
+	color:#389dc1;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+section, footer, header, aside, nav{
+	display: block;
+}
+
+
+/*-------------------------
+	The order form
+--------------------------*/
+
+
+form{
+	
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 1px #ccc;
+	width: 400px;
+	padding: 25px 20px;
+	margin: 15px auto;
+}
+
+form h1{
+	
+	font-size:64px;
+	font-family:'Cookie', cursive;
+	font-weight: normal;
+	line-height:1;
+	text-shadow:0 3px 0 rgba(0,0,0,0.1);
+}
+
+form ul{
+	list-style:none;
+	
+	font-size:15px;
+	font-weight:bold;
+	text-align: left;
+	margin:20px 0 15px;
+}
+
+form ul li{
+	padding:10px 20px;
+		
+	margin-bottom:8px;
+	box-shadow:0 1px 1px rgba(0,0,0,0.1);
+	cursor:pointer;
+}
+
+form ul li span{
+	float:right;
+}
+
+form ul li.active{
+	background-color:#8ec16d;
+}
+
+div.total{
+	border-bottom:1px solid #d3d3d3;
+	padding:1px 10px;
+	font-size:15px;
+	font-weight:bold;
+	text-align: left;
+	
+}
+
+div.total span{
+	float:right;
+}
