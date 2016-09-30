@@ -3,7 +3,7 @@
 		
 	   var app = angular.module('myApp', []);
 		app.controller('myCtrl',['$scope','$http', function($scope, $http) {
-			$scope.query=function($scope, $http) {
+			$scope.query=function() {
 				alert();
 								
 				$http({
