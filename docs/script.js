@@ -123,6 +123,34 @@ app.controller('myCtrl',['$scope','$http', function($scope, $http) {
 	//	http://127.0.0.1:3000/user//from/entity.from.entityName/to/entity.to.entityName/amount/entity.amount
 	//};
 	
+	$scope.createdTransaction = [
+		{
+			transactionId : "100",
+			to : "Netherlands",
+			from : "France",
+			amount : "8772,12",
+			status : "Created",
+			isApproved : false
+		},
+		{
+			transactionId : "101",
+			to : "Netherlands",
+			from : "Spain",
+			amount : "10,1",
+			status : "Created",
+			isApproved : false
+		},
+		{
+			transactionId : "100",
+			to : "Netherlands",
+			from : "France",
+			amount : "982,31",
+			status : "Approved",
+			isApproved : true
+		}
+	];
+	
+	
 }]);
 
 
