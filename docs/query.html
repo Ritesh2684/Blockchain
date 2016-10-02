@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>Query Entities</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+  
+		<!--javascript file -->
+		<script src="script.js"></script>
+		<!--Css Styling -->
+		<style>
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+			}
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="">
+								
+			<div class="">
+				
+				<div class="headdiv" >
+					<div class="heading">
+						
+									<a  href="index.html">Home</a></th>
+									<a href="register.html">Register Entity</a></th>
+									<a href="transaction.html">Transaction</a></th>
+									<a href="query.html">Query</a></th>
+								
+					</div>
+				</div>
+			
+			</div>
+
+		</div>
+		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">	
+			<div class="container">
+				<div class="boxOverview">
+					<div class=""><h3>Sponsor</h3></div>
+					<hr>
+					<div>
+						<table class="table tab">
+							<thead>
+								<tr>
+									<th  colspan="2" class="columnheader"><b>Entity </b></th>
+									<th    colspan="2" class="columnheader"><b>Cash</b></th>
+									<th    colspan="2" class="columnheader"><b>LNB</b></th>
+									
+								</tr>
+								<tr>
+									<th   class="columnheader"><b> Id</b></th>
+									
+									<th   class="columnheader"><b> Name</b></th>
+									<th   class="columnheader"><b>Eur Balance</b></th>
+									
+									<th   class="columnheader"><b>USD Balance</b></th>
+									<th   class="columnheader"><b>Eur Balance</b></th>
+									<th   class="columnheader"><b>USD Balance</b></th>
+								</tr>
+							</thead>	
+							<tbody>
+								<tr > 
+									<td >{{entities[0].enittyId}}</td>
+									<td > {{entities[0].entityName}}</td>
+									<td >{{entities[0].eurBal}}</td>
+									<td > {{entities[0].usdBal}}</td>
+									<td >{{entities[0].eurLnb}}</td>
+									<td > {{entities[0].eurLnb}}</td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+				</div>
+				<div class="boxOverview">
+					<div class=""><h3>Entity List</h3></div>
+					<hr>
+					<div>
+						<table  class="table tab">
+							<thead>
+								<tr>
+									<th  colspan="2" class="columnheader"><b>Entity </b></th>
+									<th    colspan="2" class="columnheader"><b>Cash</b></th>
+									<th    colspan="2" class="columnheader"><b>LNB</b></th>
+									
+								</tr>
+								<tr>
+									<th   class="columnheader"><b> Id</b></th>
+									
+									<th   class="columnheader"><b> Name</b></th>
+									<th   class="columnheader"><b>Eur Balance</b></th>
+									
+									<th   class="columnheader"><b>USD Balance</b></th>
+									<th   class="columnheader"><b>Eur Balance</b></th>
+									<th   class="columnheader"><b>USD Balance</b></th>
+								</tr>
+							</thead>	
+							<tbody>
+								<tr ng-repeat="entity in entities"> 
+									<td >{{entities[0].enittyId}}</td>
+									<td > {{entities[0].entityName}}</td>
+									<td >{{entities[0].eurBal}}</td>
+									<td > {{entities[0].usdBal}}</td>
+									<td >{{entities[0].eurLnb}}</td>
+									<td > {{entities[0].eurLnb}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+				</div>
+			</div>		
+		</div>
+	</body>
+	
+</html>	

@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Register Entity</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!--javascript file -->
+		<script src="script.js"></script>
+		<!--Css Styling -->
+		<style>
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+			}
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="fixedContent">
+			<div class="mainnavigationarea">
+			</div>
+			<br/><br/><br/>
+			<div class="top_navplaceholder">
+				<div id="top_navigation_area">
+					<table style="background-color:powderblue;">
+						<thead>
+							<tr>
+								<td width="20%"><a href="index.html">Home</a></th>
+								<td width="20%"><a href="register.html">Register Entity</a></th>
+								<td width="20%"><a href="transaction.html">Transaction</a></th>
+								<td width="20%"><a href="query.html">Query</a></th>
+								<td width="20%"><a href="createTransaction.html">Create Transaction</a></td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">	
+			<form>
+						<table class="table table-striped table-hover" width: "40%">
+							<tr>
+								<td> To : </td>
+								<td>
+									<select ng-model="entity.to" ng-options="x.entityName for x in entities"></select>
+								</td>
+							
+							<tr>
+								<td> From : </td>
+								<td>
+									<select ng-model="entity.from" ng-options="x.entityName for x in entities"></select>
+								</td
+							</tr>
+							
+							<tr>
+								<td> Amount : </td>
+								<td>
+									<div class="form-group">    
+										<input type="text" class="form-control" id="entity.amount" placeholder="Enter the Amount" ng-model="amount">
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td  colspan="2">
+									<button ng-click="trenasfer(entity);" class="btn btn-primary">Transfer</button>
+								</td>	
+							</tr>	
+						</table>	
+					</form>
+			</div>
+		<div>
+	</body>
+</html>
+
+
+
