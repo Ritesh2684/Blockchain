@@ -1,0 +1,37 @@
+ $scope.createTransaction = function(entity){
+			entity.transactionId = "104";
+			status = "Created";
+			isApproved = false;
+			alert(entity.to);
+			alert(entity.from);
+			alert(entity.amount);
+			$scope.createdTransaction.push(entity)
+			alert($scope.createdTransaction.length);
+	};
+	
+	$scope.createdTransaction = [
+		{
+			transactionId : "100",
+			to : "Netherlands",
+			from : "France",
+			amount : "8772,12",
+			status : "Created",
+			isApproved : false
+		},
+		{
+			transactionId : "101",
+			to : "Netherlands",
+			from : "Spain",
+			amount : "10,1",
+			status : "Created",
+			isApproved : false
+		},
+		{
+			transactionId : "100",
+			to : "Netherlands",
+			from : "France",
+			amount : "982,31",
+			status : "Approved",
+			isApproved : true
+		}
+	];

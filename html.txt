@@ -1,0 +1,23 @@
+	<h2> Transaction List</h2>
+			<div>
+				<table>
+					<thead>
+						<tr>
+							<td width="20%" class="columnheader"><b>Transaction Id</b></th>
+							<td width="20%" class="columnheader"><b>To</b></th>
+							<td width="20%" class="columnheader"><b>From</b></th>
+							<td width="20%" class="columnheader"><b>Amount</b></th>
+							<td width="20%" class="columnheader"><b>Action</b></th>
+						</tr>
+					</thead>	
+					<tbody>
+						<tr ng-repeat="transaction in createdTransaction"> 
+							<td width="20%">{{transaction.transactionId}} </td>
+							<td width="20%">{{transaction.to}} </td>
+							<td width="20%">{{transaction.from}} </td>
+							<td width="20%">{{transaction.amount}} </td>
+							<td width="20%"  ng-show = !transaction.isApproved> <button class="btn btn-primary" ng-click="approveTransaction(transaction)">Approve</button> </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
