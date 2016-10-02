@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>Transaction Details</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!--javascript file -->
+		<script src="script.js"></script>
+		<!--Css Styling -->
+		<style>
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+
+
+		<div class="fixedContent">
+	<div class="mainnavigationarea">
+		<div class="topimage_area">
+			<div id="top_logo" class="top_logo">
+				<img border="0" src="images/logo.png" width="266" height="46"></img>
+			</div>
+		</div>
+	</div>
+	<div class="top_navplaceholder">
+		<div id="top_navigation_area">
+			<ul id="mainnav">
+				<li>
+					<a>Home</a>
+				</li>
+				<li>
+					<a href="demo.html">Register Entity</a>
+				</li>
+				<li>
+					<a href="transaction.html">Transaction</a>
+				</li>
+				<li>
+					<a href="query.html">Query</a>
+				</li>
+				
+			</ul>
+ 		</div>
+	</div>
+
+		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">	
+		
+			<div class="container">
+				<div>
+					<br/><br/>
+					<h3> <u>User Details : </u></h3>
+					<table width: "40%">
+						<tr>
+							<td> Name</td>
+							<td> {{user.name}} </td>
+						</tr>
+						<tr>
+							<td> Account Number</td>
+							<td> {{user.accountNumber}} </td>
+						</tr>
+						<tr>
+							<td> Account Balance</td>
+							<td> {{user.accountBalance}} </td>
+						</tr>
+					</table>
+				</div>
+				<br/><br/>
+				<h3><u>Transaction Summary :</u></h2>
+				<div>
+					<table>
+						<thead>
+							<tr>
+								<td width="20%" class="columnheader"><b>Serial Number</b></th>
+								<td width="20%" class="columnheader"><b>Transaction Date</b></th>
+								<td width="20%" class="columnheader"><b>Transaction Remark</b></th>
+								<td width="20%" class="columnheader"><b>Transaction Type</b></th>
+								<td width="20%" class="columnheader"><b>Amount</b></th>
+							</tr>
+						</thead>	
+						<tbody>
+							<tr ng-repeat="transaction in user.transactions"> 
+								<td width="20%">{{transaction.serialNumber}} </td>
+								<td width="20%">{{transaction.transactionDate}} </td>
+								<td width="20%">{{transaction.transactionRemark}} </td>
+								<td width="20%">{{transaction.transactionType}} </td>
+								<td width="20%">{{transaction.amount}} </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+		<div>
+	</body>
+</html>
+
+
+

@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Register Entity</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!--javascript file -->
+		<script src="script.js"></script>
+		<!--Css Styling -->
+		<style>
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+			}
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="fixedContent">
+			<div class="mainnavigationarea">
+			</div>
+			<br/><br/><br/>
+			<div class="top_navplaceholder">
+				<div id="top_navigation_area">
+					<table style="background-color:powderblue;">
+						<thead>
+							<tr>
+								<td width="20%"><a href="index.html">Home</a></th>
+								<td width="20%"><a href="register.html">Register Entity</a></th>
+								<td width="20%"><a href="transaction.html">Transaction</a></th>
+								<td width="20%"><a href="query.html">Query</a></th>
+								<td width="20%"><a href="createTransaction.html">Create Transaction</a></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div ng-app="myApp" ng-controller="myCtrl" class="maincontent">	
+		
+			<div class="container">
+				<div>
+					<br/><br/>
+					<h3>Register Entity : </h3>
+
+					<form>
+						<table class="table table-striped table-hover" width: "40%">
+							<tr>
+								<td> Entity Name : </td>
+								<td>
+									<div class="form-group">    
+										<input type="text" class="form-control" id="entityName" placeholder="Enter Entity Name" ng-model="entity.entityName">
+									</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td> Initial Balance : </td>
+								<td>
+									<div class="form-group">    
+										<input type="text" class="form-control" id="initialBalance" placeholder="Enter Initial Balance" ng-model="entity.initialBalance">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td  colspan="2">
+									<button ng-click="registerEntity(entity);" class="btn btn-primary">Register</button>
+								</td>	
+							</tr>	
+					</form>
+				</div>
+			</div>
+		<div>
+	</body>
+</html>
+
+
+
